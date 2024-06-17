@@ -38,7 +38,7 @@ input:
     description: 'Slack secrets'
     required: false
   whatsapp_secrets:
-    description: 'Slack secrets'
+    description: 'Whatsapp secrets'
     required: false
   charts_secrets:
     description: 'Charts secrets'
