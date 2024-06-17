@@ -48,7 +48,7 @@ export default new IntegrationDefinition({
       },
     },
     schema: z.object({
-      useManualConfiguration: z.boolean(),
+      useManualConfiguration: z.boolean().optional(),
       verifyToken: z.string().optional(),
       accessToken: z.string().optional(),
       phoneNumberId: z.string().optional(),
