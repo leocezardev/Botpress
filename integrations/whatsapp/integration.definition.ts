@@ -48,10 +48,11 @@ export default new IntegrationDefinition({
       },
     },
     schema: z.object({
-      useManualConfiguration: z.boolean().optional(),
-      verifyToken: z.string().optional(),
+      useManualConfiguration: z.boolean().optional().describe('Skip oAuth and supply details from a Meta App'),
+      verifyToken: z.string().optional().describe('Token used for verification when subscribing to webhooks'),
       accessToken: z.string().optional(),
-      phoneNumberId: z.string().optional(),
+      clientSecret: z.string().optional().describe('Meta app secret used for webhook signature check'),
+      phoneNumberId: z.string().optional().describe('Default Phone used for starting conversations'),
     }),
   },
   identifier: {
